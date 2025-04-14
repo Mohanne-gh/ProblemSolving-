@@ -1,0 +1,5 @@
+1-Define the list
+2-Define the problem 
+3-Find the highest number 
+4-Count the highest number which you find it
+5-Return the count number
