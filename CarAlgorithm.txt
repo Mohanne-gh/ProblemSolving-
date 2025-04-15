@@ -1,0 +1,25 @@
+Step 1: Write down for both cars:
+
+Price
+
+miles per gallon
+
+Step 2: 
+
+Gas is $4 per gallon
+
+You drive 15,000 miles each year
+
+You keep the car for 10 years
+
+Step 3: Do this for each car:
+
+-Divide 15,000 by miles per gallon → This tells you how many gallons it uses per year
+
+- Multiply that number by 4 → This is the yearly fuel cost
+
+-Multiply that by 10 → This is the 10-year fuel cost
+
+-Add the car's price → This is the total cost of the car over 10 years
+
+Step 4: Compare both total costs
