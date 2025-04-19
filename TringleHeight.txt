@@ -1,0 +1,25 @@
+1- understanding the problem
+We want to print a triangle where each row has ascending and then descending numbers, and the middle number is double the previous one.
+
+2- Analyze the Problem
+
+The pattern is:
+Start with 1
+Multiply by 2 each time to get the next number in the ascending half
+Then reverse it (except the last number) to get the descending half
+
+python code:
+
+n = int(input("Enter the height of the triangle: "))
+
+for i in range(1, n + 1):
+    ascending = [1]
+    
+    for j in range(1, i):
+        ascending.append(ascending[-1] * 2)
+
+    full_row = ascending + ascending[-2::-1]
+
+    for num in full_row:
+        print(num, end="")
+    print()
