@@ -1,0 +1,59 @@
+# Input the first number and convert to float
+Fnumber = float(input("Input the first number: "))
+
+# Input the second number and convert to float
+Snumber = float(input("Input the second number: "))
+
+# Addition of two numbers
+addition = Fnumber + Snumber
+print("Your number after Addition is:", addition)
+
+# Subtraction: second number minus first number
+subtraction = Snumber - Fnumber
+print("Your number after subtraction is:", subtraction)
+
+# Multiplication of two numbers
+multiplication = Snumber * Fnumber
+print("Your number after multiplication is:", multiplication)
+
+# Division of first number by second number with zero check
+if Snumber != 0:
+    Division = Fnumber / Snumber
+    print("Your number after Division is:", Division)
+else:
+    print("Error: Cannot divide by zero")
+
+# Define variables of different types
+a = 10        # integer
+b = 5.5       # float
+c = "Mohanned" # string
+
+# Print the types of variables
+print("The type of variable a is:", type(a))
+print("The type of variable b is:", type(b))
+print("The type of variable c is:", type(c))
+
+# Personal information variables
+name = "Ali"
+age = 25
+height = 1.68
+
+# Print personal information
+print("Hello, my name is", name, ". I am", age, "years old and my height is", height, "meters.")
+
+# Input length and width for rectangle area calculation
+length = float(input("Please input the length: "))
+Width = float(input("Please input the Width: "))
+
+# Calculate the area of the rectangle
+area = length * Width
+print("The area of the rectangle is:", area)
+
+# Input principal amount, rate, and time for simple interest
+P = float(input("Enter the principal amount: "))
+R = float(input("Enter the rate of interest: "))
+T = float(input("Enter the time in years: "))
+
+# Calculate simple interest
+SimpleInterest = (P * R * T) / 100
+print("The Simple Interest is", SimpleInterest)
