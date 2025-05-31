@@ -1,0 +1,106 @@
+# Python Data Structures: Lists, NumPy Arrays, Dictionaries, and Tuples
+
+
+# 1. Working with nested lists
+# --------------------------------------
+
+list2 = [ 
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+print("Nested list:", list2)
+print("Element at row 0, column 1:", list2[0][1])  # Outputs 2
+
+
+# 2. Converting list to NumPy array
+# --------------------------------------
+
+import numpy as np
+
+matrix = np.array(list2)
+print("NumPy matrix:\n", matrix)
+
+
+# 3. Working with dictionaries
+# --------------------------------------
+
+# Favorite colors dictionary
+favColors = {"Romeo": "green", "Adam": "red"}
+print("Favorite colors:", favColors)
+
+# Contacts dictionary
+contacts = {
+    "police": 9999,
+    "hospital": 9898
+}
+print("Contacts:", contacts)
+
+# Make a copy of contacts
+oldcontacts = dict(contacts)
+print("Old contacts copy:", oldcontacts)
+
+# Accessing value by key
+print("Police number is:", contacts["police"])
+
+# Check if a key exists
+if "police" in contacts:
+    print("Police number is:", contacts["police"])
+else:
+    print("Police is not in my contact list.")
+
+# Using get() method with default value
+number = contacts.get("hospital", 411)
+print("Hospital number is:", number)
+
+# Updating dictionary value
+contacts["hospital"] = 9000
+print("Updated contacts:", contacts)
+
+# Adding new entries
+contacts["majeed"] = 999000
+contacts["faisal"] = 897788
+print("Contacts after adding more:", contacts)
+
+
+# 4. Working with an empty dictionary
+# --------------------------------------
+
+favanimals = {}
+print("Empty favanimals dictionary:", favanimals)
+
+# Add and remove from dictionary
+favanimals["monkey"] = "yellow"
+favanimals.pop("monkey")
+print("favanimals after removing monkey:", favanimals)
+
+# Trying to use undefined 'pop' and 'color' would cause errors – commented out
+# pop("bird")
+# print("color")
+
+# Loop through dictionary keys
+for key in favanimals:
+    print("Animal:", key)
+
+# Loop through dictionary items
+for item in contacts.items():
+    print("Name:", item[0], "| Number:", item[1])
+
+
+# 5. Working with tuples
+# --------------------------------------
+
+t1 = (1, 2, 3)
+t2 = ("a", "b", "c")
+t3 = (200, "A", [4, 5], 3.2)
+
+print("Tuple t1:", t1)
+print("Tuple t2:", t2)
+print("Tuple t3:", t3)
+
+# Accessing tuple element
+print("Second element of t1:", t1[1])  # Outputs 2
+
+# Concatenating tuples
+t4 = t1 + t2
+print("Concatenated tuple t4:", t4)
