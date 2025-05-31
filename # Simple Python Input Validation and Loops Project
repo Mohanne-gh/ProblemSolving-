@@ -1,0 +1,59 @@
+# Python Input Validation Examples: Password Check, Salary Total, and Loop Counter
+
+import re  # for regular expressions
+
+
+# 1. Username and Password Validation
+-----------
+
+print("\n--- User Login & Password Validation ---\n")
+
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+# Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, and one digit
+def is_valid_password(password):
+    if len(password) < 8:
+        return False
+    if not re.search(r"[A-Z]", password):  # At least one uppercase letter
+        return False
+    if not re.search(r"[a-z]", password):  # At least one lowercase letter
+        return False
+    if not re.search(r"[0-9]", password):  # At least one digit
+        return False
+    return True
+
+# Check if password is valid
+if not is_valid_password(password):
+    print("Password is invalid! It must have at least 8 characters, one uppercase, one lowercase, and one digit.")
+    exit()
+
+print("Password is valid. Account created successfully!")
+
+
+# 2. Counter from 1 to 10 using while loop
+# --------------------------------------
+
+print("\n--- Counting from 1 to 10 ---\n")
+
+counter = 1
+while counter <= 10:
+    print(counter)
+    counter += 1  # Increase counter by 1
+
+
+# 3. Salary Input Loop (End with -1)
+# --------------------------------------
+
+
+done = False
+total_salary = 0
+
+while not done:
+    value = float(input("Enter a salary or -1 to finish: "))
+    if value < 0:
+        done = True
+    else:
+        total_salary += value
+
+print("\nTotal salary entered:", total_salary)
