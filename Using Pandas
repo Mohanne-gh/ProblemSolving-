@@ -1,0 +1,61 @@
+import pandas as pd
+import numpy as np
+
+# Create a Series with custom index labels
+series = pd.Series([10, 20, 40], index=["Apple", "Banana", "Mango"])
+print(series)
+
+# Create a Series from a dictionary
+sales = pd.Series({
+    "Apple": 100,
+    "Orange": 60,
+    "Mango": 80
+})
+print(sales)
+
+# Access elements by position and label
+print("Access by index 0:", sales[0])
+print("Access by label 'Apple':", sales["Apple"])
+
+# Filter elements greater than 70
+print("Sales greater than 70:")
+print(sales[sales > 70])
+
+# Larger Series example
+ser = pd.Series({
+    "Milk": 120,
+    "Bread": 80,
+    "Eggs": 200,
+    "Cheese": 150,
+    "Butter": 90
+})
+print(ser)
+
+# Sum of all elements
+print("Total sum:", sum(ser))
+
+# Find max value and print rows matching max
+max1 = np.max(ser)
+print("Max value:", max1)
+print("Row(s) with max value:")
+print(ser[ser == max1])
+
+# Reading CSV file
+data = pd.read_csv("C:/Users/lenovo/Downloads/sales_data.csv")
+months = data["Month"]
+
+# Set 'Month' as index of dataframe
+dataAsSeries = data.set_index('Month')
+print(dataAsSeries)
+
+# Reading another CSV and converting columns to Series
+dataFruit = pd.read_csv("C:/Users/lenovo/Downloads/fruit_prices_15.csv")
+print(dataFruit)
+
+# Create Series with fruit names as index and prices as values
+dataAsSeries = pd.Series(dataFruit["Price"].values, index=dataFruit["Fruit"])
+print(dataAsSeries)
+
+# Access specific item price by label
+print("Price for Mango is:", dataAsSeries["Mango"])
+print("Price for Orange is:", dataAsSeries["Orange"])
