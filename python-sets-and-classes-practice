@@ -1,0 +1,76 @@
+# Sets in Python
+
+
+# Define a set
+numberSet = {1, 2, 3, 4, 5, 6}
+print("numberSet:", numberSet)
+
+# Define an empty set (note: {} creates a dict)
+emptySet = {}
+print("Type of emptySet:", type(emptySet))  # should be <class 'dict'>
+
+# Create a set from a list
+set_with_lists = set([1, 2, 3])
+print("set_with_lists:", set_with_lists)
+
+# Add more elements using update
+set_with_lists.update([4, 5, 6])
+print("Updated set_with_lists:", set_with_lists)
+
+# Set operations
+A = {1, 2, 3, 4}
+B = {2, 4, 6, 8, 6, 6}  # duplicates are removed automatically
+
+print('A =', A)
+print('B =', B)
+
+print("Union A | B:", A | B)
+print("Intersection A & B:", A & B)
+print("Difference A - B:", A - B)
+print("Symmetric Difference A ^ B:", A ^ B)
+
+
+# OOP: Working with Classes in Python
+# ------------------------------------------
+
+# Dog class with private and protected variables
+class Dog:
+    def __init__(self, name, age):
+        self._name = name      # protected
+        self.__age = age       # private
+
+    def bark(self, game):
+        return f"{self._name} says woof and plays with {game}!"
+
+    def get_name(self):
+        return self._name
+
+    def get_age(self):
+        return self.__age
+
+    def update_name(self, name):
+        self._name = name
+
+# Create a Dog object
+my_dog = Dog("Fox", 3)
+print(my_dog.bark("ball"))
+
+
+# Car Class Example
+# ------------------------------------------
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make              # public
+        self._model = model           # protected
+        self.__year = year            # private
+
+    def display_details(self, number):
+        return f"Car make: {self.make}, model: {self._model}, year: {self.__year}, number: {number}"
+
+# Create car objects
+my_car = Car("Toyota", "Corolla", 2020)
+print(my_car.display_details("1234"))
+
+mycar1 = Car("Toyota", "Camry", 2022)  # Corrected year from 20225
+print(mycar1.display_details("1111"))
